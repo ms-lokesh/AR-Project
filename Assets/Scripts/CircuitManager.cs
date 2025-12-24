@@ -16,6 +16,23 @@ public class CircuitManager : MonoBehaviour
     {
         // Cache the AR camera reference
         arCamera = Camera.main;
+        
+        // Validate required components
+        if (arCamera == null)
+        {
+            Debug.LogError("Main Camera not found! Make sure your AR camera is tagged as 'MainCamera'.");
+        }
+        
+        if (switchRenderer == null || bulbRenderer == null)
+        {
+            Debug.LogError("Switch or Bulb Renderer not assigned in CircuitManager!");
+        }
+        
+        if (OnSwitchMaterial == null || OnBulbMaterial == null || 
+            OffSwitchMaterial == null || OffBulbMaterial == null)
+        {
+            Debug.LogError("One or more materials not assigned in CircuitManager!");
+        }
     }
 
     void Update()
@@ -52,15 +69,18 @@ public class CircuitManager : MonoBehaviour
         Debug.Log($"Switch state changed to: {On}");
 
         // Apply materials based on current state
-        if (On)
+        if (switchRenderer != null && bulbRenderer != null)
         {
-            bulbRenderer.material = OnBulbMaterial;
-            switchRenderer.material = OnSwitchMaterial;
-        }
-        else
-        {
-            bulbRenderer.material = OffBulbMaterial;
-            switchRenderer.material = OffSwitchMaterial;
+            if (On)
+            {
+                if (OnBulbMaterial != null) bulbRenderer.material = OnBulbMaterial;
+                if (OnSwitchMaterial != null) switchRenderer.material = OnSwitchMaterial;
+            }
+            else
+            {
+                if (OffBulbMaterial != null) bulbRenderer.material = OffBulbMaterial;
+                if (OffSwitchMaterial != null) switchRenderer.material = OffSwitchMaterial;
+            }
         }
     }
 }

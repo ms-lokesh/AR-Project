@@ -7,10 +7,20 @@ public class ServicesManager : MonoBehaviour
     public Button HomeButton;
     public Button ServicesButton;
     public Button ProfileButton;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
-        HomeButton.onClick.AddListener(OnHomeButtonClicked);
+        if (HomeButton != null)
+        {
+            HomeButton.onClick.AddListener(OnHomeButtonClicked);
+        }
+        else
+        {
+            Debug.LogError("HomeButton is not assigned in ServicesManager!");
+        }
+        
+        // Note: ServicesButton and ProfileButton are declared but not used
+        // Consider implementing their functionality or removing them
     }
 
     // Update is called once per frame

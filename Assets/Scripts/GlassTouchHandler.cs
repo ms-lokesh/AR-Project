@@ -6,7 +6,12 @@ public class GlassTouchHandler : MonoBehaviour
 
     void Start()
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        
+        if (audioSource == null)
+        {
+            Debug.LogWarning($"No AudioSource found on {gameObject.name}. Sound will not play.");
+        }
     }
 
     void Update()

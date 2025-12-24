@@ -7,12 +7,35 @@ public class HomeManager : MonoBehaviour
     public Button ScanButton;
     public Button QuitButton;
     public Button GlassButton;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
-        ScanButton.onClick.AddListener(OnScanButtonClicked);
-        QuitButton.onClick.AddListener(OnQuitButtonClicked);
-        GlassButton.onClick.AddListener(OnGlassButtonClicked);
+        if (ScanButton != null)
+        {
+            ScanButton.onClick.AddListener(OnScanButtonClicked);
+        }
+        else
+        {
+            Debug.LogError("ScanButton is not assigned in HomeManager!");
+        }
+        
+        if (QuitButton != null)
+        {
+            QuitButton.onClick.AddListener(OnQuitButtonClicked);
+        }
+        else
+        {
+            Debug.LogError("QuitButton is not assigned in HomeManager!");
+        }
+        
+        if (GlassButton != null)
+        {
+            GlassButton.onClick.AddListener(OnGlassButtonClicked);
+        }
+        else
+        {
+            Debug.LogError("GlassButton is not assigned in HomeManager!");
+        }
     }
 
     // Update is called once per frame
@@ -30,7 +53,7 @@ public class HomeManager : MonoBehaviour
 
     public void OnGlassButtonClicked()
     {
-        Debug.Log("Glass Button Pressed");
-        SceneManager.LoadScene("GlassScene");
+        Debug.Log("Glass/Login Button Pressed");
+        SceneManager.LoadScene("LogInScene");
     }
 }

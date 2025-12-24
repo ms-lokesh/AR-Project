@@ -5,10 +5,17 @@ using UnityEngine.SceneManagement;
 public class ExitManager : MonoBehaviour
 {
     public Button ExitButton;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
-        ExitButton.onClick.AddListener(OnExitButtonClicked);
+        if (ExitButton != null)
+        {
+            ExitButton.onClick.AddListener(OnExitButtonClicked);
+        }
+        else
+        {
+            Debug.LogError("ExitButton is not assigned in ExitManager!");
+        }
     }
 
     // Update is called once per frame

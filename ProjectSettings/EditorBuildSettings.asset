@@ -11,7 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 4755b35b590504809a7525fd2109c2e2
+  - enabled: 1
+    path: Assets/Scenes/LogInScene.unity
+    guid: e65ecc9e0a656422bac4c2ede6c64622
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: eca014c7aeacd4c5b953380f0d4161cc,
+      type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 0465d33c6aee55f44b0237db8b0e0259,
@@ -23,4 +28,6 @@ EditorBuildSettings:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3fd4fc0127790db4bae83f7b77da8d45,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: b07c4ba7650be4c25b3d0c497e7e2bb8,
+      type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 567d3a5488f664ae9aa20b462c2340f0,
       type: 2}

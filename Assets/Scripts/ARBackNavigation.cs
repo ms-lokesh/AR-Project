@@ -7,6 +7,18 @@ public class ARBackNavigation : MonoBehaviour
     public ARSession arSession;
     public string previousSceneName = "HomeScene";
 
+    void Start()
+    {
+        if (arSession == null)
+        {
+            arSession = FindObjectOfType<ARSession>();
+            if (arSession == null)
+            {
+                Debug.LogWarning("ARSession not found. AR session will not be reset on back navigation.");
+            }
+        }
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -14,9 +26,17 @@ public class ARBackNavigation : MonoBehaviour
             Debug.Log("Back button detected in AR Session. Navigating to " + previousSceneName);
             if (arSession != null)
             {
-                arSession.Reset(); // Or arSession.enabled = false;
+                arSession.Reset();
             }
-            SceneManager.LoadScene(previousSceneName);
+            
+            if (!string.IsNullOrEmpty(previousSceneName))
+            {
+                SceneManager.LoadScene(previousSceneName);
+            }
+            else
+            {
+                Debug.LogError("Previous scene name is empty!");
+            }
         }
     }
 }

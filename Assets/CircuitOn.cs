@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class CircuitOn : MonoBehaviour
 {
-    // Start is called before the first frame update
     public bool circuitOn = false;
 
-    public bool circuitstatus(bool circuitOn)
+    /// <summary>
+    /// Get the current circuit status
+    /// </summary>
+    public bool GetCircuitStatus()
     {
         return circuitOn;
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Set the circuit status
+    /// </summary>
+    public void SetCircuitStatus(bool status)
     {
-        
+        circuitOn = status;
+    }
+
+    /// <summary>
+    /// Toggle the circuit status
+    /// </summary>
+    public void ToggleCircuit()
+    {
+        circuitOn = !circuitOn;
     }
 }

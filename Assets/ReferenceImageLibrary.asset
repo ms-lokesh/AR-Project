@@ -18,32 +18,52 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5175238623646145672
-      m_GuidHigh: 10887121223096351166
+      m_GuidLow: 5460151854974793868
+      m_GuidHigh: 2201340947446153886
     m_SerializedTextureGuid:
-      m_GuidLow: 8751838466108249559
-      m_GuidHigh: 8387506369194127162
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: CircuitSystem
-    m_Texture: {fileID: 0}
+      m_GuidLow: 13027559261716566789
+      m_GuidHigh: 9057219709582513785
+    m_Size: {x: 0.15, y: 0.2}
+    m_SpecifySize: 1
+    m_Name: heart
+    m_Texture: {fileID: 2800000, guid: 24f753053020b4cb791655b256b5b17d, type: 3}
   - m_SerializedGuid:
-      m_GuidLow: 5237598979479730045
-      m_GuidHigh: 4290273200895185574
+      m_GuidLow: 4719131640469200004
+      m_GuidHigh: 3491441710832562356
     m_SerializedTextureGuid:
-      m_GuidLow: 2694355086563422016
-      m_GuidHigh: 17162524944181238040
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: Neuron
-    m_Texture: {fileID: 0}
+      m_GuidLow: 7228627726561009061
+      m_GuidHigh: 18231722767745707211
+    m_Size: {x: 0.15, y: 0.2}
+    m_SpecifySize: 1
+    m_Name: mitochondria
+    m_Texture: {fileID: 2800000, guid: 4f355da53e9e6451cb6ce2ee421704fd, type: 3}
   - m_SerializedGuid:
-      m_GuidLow: 5023683437403375912
-      m_GuidHigh: 5693962316125011110
+      m_GuidLow: 4669812988603208708
+      m_GuidHigh: 2700274999261405056
     m_SerializedTextureGuid:
-      m_GuidLow: 16169107957992211134
-      m_GuidHigh: 14698214226309901737
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: Heart
-    m_Texture: {fileID: 0}
+      m_GuidLow: 4967000091458784313
+      m_GuidHigh: 15556339360631423145
+    m_Size: {x: 0.15, y: 0.20000002}
+    m_SpecifySize: 1
+    m_Name: brain
+    m_Texture: {fileID: 2800000, guid: 52bbcc39544444eea900dd3b3a38e3d7, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4807648960160665639
+      m_GuidHigh: 3488723066440598719
+    m_SerializedTextureGuid:
+      m_GuidLow: 6117163414508785812
+      m_GuidHigh: 9317122637040312651
+    m_Size: {x: 0.15, y: 0.22663353}
+    m_SpecifySize: 1
+    m_Name: kidney
+    m_Texture: {fileID: 2800000, guid: 22cfd09487b754e44be18995ac114d81, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5419237859389738237
+      m_GuidHigh: 8336482675950417552
+    m_SerializedTextureGuid:
+      m_GuidLow: 323098275358510723
+      m_GuidHigh: 14027124741014048187
+    m_Size: {x: 0.15, y: 0.20000002}
+    m_SpecifySize: 1
+    m_Name: skull
+    m_Texture: {fileID: 2800000, guid: 6a490e83e02b047bbb4d3c10a25baac2, type: 3}
